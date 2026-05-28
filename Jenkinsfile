@@ -11,14 +11,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build started.'
-                bat 'echo Build success > build-result.txt'
+                sh 'echo "Build success" > build-result.txt'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Test started.'
-                bat 'echo Test success >> build-result.txt'
+                sh 'echo "Test success" >> build-result.txt'
             }
         }
     }
